@@ -34,14 +34,7 @@ import Appendices from './components/Appendices.vue'
               </h1>
 
               <p class="introduction">
-                This portfolio brings together my works,
-                activities, explorations, and reflections
-                from Art Appreciation. It documents not
-                only the artworks I created throughout the
-                course, but also how my understanding of
-                art developed through observation,
-                experimentation, interpretation, and
-                reflection.
+                I love comic sans and my name is Charl Emmanuel E. Mendez from BSCS-4A. This portfolio is the culmination of my works, activities, explorations, and reflections from our subject GEARTS (Art Appreciation). Whether you're my teacher, my classmate, my friend, or a historian a thousand years from now, I hope you exit this webpage, just a little bit more <s>(inspired)</s> entertained.
               </p>
             </div>
 
@@ -205,9 +198,9 @@ import Appendices from './components/Appendices.vue'
 .contents {
   margin-top:
     clamp(
-      30px,
-      4vh,
-      44px
+      24px,
+      3vh,
+      34px
     );
 }
 
@@ -219,11 +212,11 @@ import Appendices from './components/Appendices.vue'
   display: inline-flex;
   align-items: center;
 
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   padding:
-    8px
-    16px;
+    6px
+    13px;
 
   background:
     rgba(245, 238, 220, 0.96);
@@ -232,7 +225,7 @@ import Appendices from './components/Appendices.vue'
     2px solid #171717;
 
   box-shadow:
-    5px 5px 0 #171717;
+    4px 4px 0 #171717;
 }
 
 .contents-heading p {
@@ -242,9 +235,9 @@ import Appendices from './components/Appendices.vue'
 
   font-size:
     clamp(
-      0.9rem,
-      1.1vw,
-      1.05rem
+      0.78rem,
+      0.9vw,
+      0.92rem
     );
 
   font-weight: 700;
@@ -260,7 +253,7 @@ import Appendices from './components/Appendices.vue'
   display: flex;
   flex-direction: column;
 
-  gap: 18px;
+  gap: 12px;
 }
 
 /* =========================
@@ -271,7 +264,7 @@ import Appendices from './components/Appendices.vue'
   display: grid;
 
   grid-template-columns:
-    110px
+    92px
     minmax(0, 1fr);
 
   width: 100%;
@@ -283,7 +276,7 @@ import Appendices from './components/Appendices.vue'
     2px solid #171717;
 
   box-shadow:
-    8px 8px 0 #171717;
+    7px 7px 0 #171717;
 
   overflow: hidden;
 
@@ -300,7 +293,7 @@ import Appendices from './components/Appendices.vue'
     );
 
   box-shadow:
-    11px 11px 0 #171717;
+    10px 10px 0 #171717;
 }
 
 /* =========================
@@ -338,8 +331,8 @@ import Appendices from './components/Appendices.vue'
   justify-content: center;
 
   padding:
-    20px
-    12px;
+    14px
+    10px;
 
   border-right:
     2px solid #171717;
@@ -348,9 +341,9 @@ import Appendices from './components/Appendices.vue'
 .contents-number {
   font-size:
     clamp(
-      2rem,
-      2.5vw,
-      2.8rem
+      1.7rem,
+      2.1vw,
+      2.3rem
     );
 
   font-weight: 700;
@@ -369,21 +362,21 @@ import Appendices from './components/Appendices.vue'
   display: grid;
 
   grid-template-columns:
-    minmax(280px, 0.9fr)
+    minmax(260px, 0.9fr)
     minmax(0, 1.3fr);
 
   align-items: center;
 
   gap:
     clamp(
-      28px,
-      4vw,
-      70px
+      22px,
+      3vw,
+      50px
     );
 
   padding:
-    22px
-    30px;
+    14px
+    22px;
 }
 
 .reflection-body {
@@ -403,9 +396,9 @@ import Appendices from './components/Appendices.vue'
 
   font-size:
     clamp(
-      2.25rem,
-      3vw,
-      3.35rem
+      1.9rem,
+      2.5vw,
+      2.8rem
     );
 
   line-height: 0.95;
@@ -416,48 +409,44 @@ import Appendices from './components/Appendices.vue'
 
 .contents-main p {
   margin:
-    9px
+    6px
     0
     0;
 
   font-size:
     clamp(
-      1rem,
-      1.25vw,
-      1.35rem
+      0.88rem,
+      1.05vw,
+      1.12rem
     );
 
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 /* =========================
    CONTENT ITEMS
-
-   Using columns instead of grid prevents
-   long items in one column from creating
-   empty vertical space in the other.
    ========================= */
 
 .contents-items {
   margin: 0;
 
-  padding-left: 22px;
+  padding-left: 20px;
 
   column-count: 2;
-  column-gap: 44px;
+  column-gap: 38px;
 }
 
 .contents-items li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 
   font-size:
     clamp(
-      1rem,
-      1.2vw,
-      1.28rem
+      0.88rem,
+      1vw,
+      1.08rem
     );
 
-  line-height: 1.25;
+  line-height: 1.2;
 
   break-inside: avoid;
 }
@@ -469,26 +458,26 @@ import Appendices from './components/Appendices.vue'
 @media (max-width: 1000px) {
   .contents-row {
     grid-template-columns:
-      90px
+      80px
       minmax(0, 1fr);
   }
 
   .contents-number-column {
     padding:
-      20px
-      10px;
+      14px
+      8px;
   }
 
   .contents-body {
     grid-template-columns:
-      minmax(220px, 0.9fr)
+      minmax(210px, 0.9fr)
       minmax(0, 1.1fr);
 
-    gap: 24px;
+    gap: 20px;
 
     padding:
-      20px
-      24px;
+      16px
+      20px;
   }
 
   .reflection-body {
@@ -506,27 +495,27 @@ import Appendices from './components/Appendices.vue'
 
 @media (max-width: 760px) {
   .contents {
-    margin-top: 28px;
+    margin-top: 24px;
   }
 
   .contents-heading {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 
     padding:
-      7px
-      12px;
+      6px
+      11px;
 
     box-shadow:
       4px 4px 0 #171717;
   }
 
   .contents-list-wrapper {
-    gap: 14px;
+    gap: 12px;
   }
 
   .contents-row {
     grid-template-columns:
-      70px
+      62px
       minmax(0, 1fr);
 
     box-shadow:
@@ -544,16 +533,16 @@ import Appendices from './components/Appendices.vue'
     align-items: center;
 
     padding:
-      18px
-      8px;
+      14px
+      6px;
   }
 
   .contents-number {
     font-size:
       clamp(
-        1.55rem,
-        7vw,
-        2rem
+        1.4rem,
+        6vw,
+        1.8rem
       );
   }
 
@@ -561,45 +550,45 @@ import Appendices from './components/Appendices.vue'
   .reflection-body {
     grid-template-columns: 1fr;
 
-    gap: 16px;
+    gap: 12px;
 
     padding:
-      18px
-      16px;
+      15px
+      14px;
   }
 
   .contents-main h2 {
     font-size:
       clamp(
-        1.8rem,
-        8vw,
-        2.5rem
+        1.6rem,
+        7vw,
+        2.15rem
       );
   }
 
   .contents-main p {
     font-size:
       clamp(
-        0.9rem,
-        4vw,
-        1.08rem
+        0.85rem,
+        3.8vw,
+        1rem
       );
   }
 
   .contents-items {
     column-count: 1;
 
-    padding-left: 18px;
+    padding-left: 17px;
   }
 
   .contents-items li {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 
     font-size:
       clamp(
-        0.9rem,
-        4vw,
-        1.05rem
+        0.85rem,
+        3.8vw,
+        0.98rem
       );
   }
 }

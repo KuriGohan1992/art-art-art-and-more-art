@@ -64,10 +64,22 @@ main {
 .front-matter-page {
   min-height: 100svh;
 
+  display: flex;
+  align-items: center;
+
   padding:
-    112px
+    90px
     var(--page-padding)
     40px;
+}
+
+.front-matter {
+  width: min(
+    var(--page-max-width),
+    100%
+  );
+
+  margin: 0 auto;
 }
 
 .front-matter {
