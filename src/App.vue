@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.vue'
 import PartOne from './components/PartOne.vue'
 import PartTwo from './components/PartTwo.vue'
 import FinalReflection from './components/FinalReflection.vue'
+import Appendices from './components/Appendices.vue'
 </script>
 
 <template>
@@ -143,10 +144,7 @@ import FinalReflection from './components/FinalReflection.vue'
 
      <FinalReflection />
 
-      <section
-        id="appendices"
-        class="future-section"
-      ></section>
+      <Appendices/>
     </main>
   </div>
 </template>
