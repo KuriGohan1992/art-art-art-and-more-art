@@ -434,7 +434,7 @@ onBeforeUnmount(() => {
     {{
       isPaused
         ? 'Resume Background'
-        : 'Pause Background'
+        : 'Stop Background'
     }}
   </button>
 </template>
@@ -689,7 +689,7 @@ onBeforeUnmount(() => {
     left: -4vw;
 
     animation-duration:
-      210s;
+      125s;
   }
 
   .collage-panel {
