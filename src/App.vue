@@ -1,5 +1,5 @@
 <script setup>
-import { Analytics } from '@vercel/analytics/vue'
+
 import CollageBackground from './components/CollageBackground.vue'
 import Navbar from './components/Navbar.vue'
 import PartOne from './components/PartOne.vue'
@@ -10,7 +10,7 @@ import Appendices from './components/Appendices.vue'
 
 <template>
   <div class="site">
-  <Analytics/>
+  
     <CollageBackground />
 
     <Navbar />
