@@ -2,6 +2,8 @@
 import CollageBackground from './components/CollageBackground.vue'
 import Navbar from './components/Navbar.vue'
 import PartOne from './components/PartOne.vue'
+import PartTwo from './components/PartTwo.vue'
+import FinalReflection from './components/FinalReflection.vue'
 </script>
 
 <template>
@@ -137,15 +139,9 @@ import PartOne from './components/PartOne.vue'
 
       <PartOne />
 
-      <section
-        id="part-two"
-        class="future-section"
-      ></section>
+    <PartTwo />
 
-      <section
-        id="reflection"
-        class="future-section"
-      ></section>
+     <FinalReflection />
 
       <section
         id="appendices"
