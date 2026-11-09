@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 :root {
   --page-max-width: 1600px;
   --page-padding: 32px;
@@ -5,7 +6,8 @@
   font-family:
     "Comic Sans MS",
     "Comic Sans",
-    cursive;
+    "Comic Neue",
+    sans-serif;
 
   color: #171717;
 
