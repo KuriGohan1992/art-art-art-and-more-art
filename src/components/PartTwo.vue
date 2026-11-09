@@ -39,7 +39,28 @@ function closeImage() {
           </h3>
 
           <p>
-            (Caption Placeholder)
+            This was my most recent drawing. I drew this from
+            December 23, 2023 to January 20, 2024. Before
+            this, the last time I drew was in November 2021.
+            I don't really draw for the sake of drawing;
+            drawing, to me, is more of a means to express my
+            passion for a show or a character. I guess
+            recently, I haven't really been interested in any
+            fictional characters, mainly because I don't
+            watch anime anymore since I've gotten pretty
+            busy. But I do hope that I can find a character
+            that I can pour my passion into once again. Side
+            note, I don't believe myself to be a good artist
+            because I really just copy things, and if you
+            look closely, I use the grid method, so it's more
+            of a patience test if anything. But if you think
+            this looks good, you can check out my entire
+            drawing collection
+            <a
+              href="https://drive.google.com/drive/folders/1cZ1HMJl471jRczDNghU_LOIdmkia_yn_?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >here</a>.
           </p>
         </div>
 
@@ -105,7 +126,21 @@ function closeImage() {
           </h3>
 
           <p>
-            (Caption Placeholder)
+            I searched "cool looking origami" on YouTube and
+            this showed up. The
+            <a
+              href="https://youtu.be/W-ms0cyJ64Q?si=-FOTC26JrG_JHkRT"
+              target="_blank"
+              rel="noopener noreferrer"
+            >video</a> was 45 minutes long, so I thought it
+            would take me about that long. But boy was I
+            wrong. I folded this during our department's "Day
+            with the Chair." I started even before the event
+            began, and I didn't even manage to fully finish
+            it within the 3-hour event. I finished it shortly
+            after in the Space Lounge. It was an interesting
+            challenge, but I don't think I'd want to do it
+            again anytime soon.
           </p>
         </div>
 
@@ -175,7 +210,21 @@ function closeImage() {
           </h3>
 
           <p>
-            (Caption Placeholder)
+            This is probably the most iconic rap song in the
+            Philippines. I hear it all the time, and I was
+            confident that I could talk pretty fast. So I
+            memorized the lyrics, then I approached one of my
+            classmates, John Patrick Piamonte (if you're
+            reading this, Doc J, you know him for sure). He
+            has a studio for rent where he let me record for
+            dirt cheap compared to normal. Then I learned
+            that the hard part wasn't talking fast; it was
+            managing my breathing during the verses. You can
+            hear me mistime my breaths in the video. Also, I
+            added the oldie damaged-film effect because one
+            of the phones I used to record was pretty blurry,
+            so I might as well commit to that, and it fits
+            the era of the song perfectly too.
           </p>
         </div>
       </article>
@@ -191,7 +240,27 @@ function closeImage() {
           </h3>
 
           <p>
-            (Caption Placeholder)
+            This is the one that I spent the most time
+            practicing for. We had a broken keyboard in our
+            house that I never really bothered playing. Then
+            this project was announced, and I tried searching
+            for something interesting I could play that was
+            also easy enough to learn in a few weeks. I found
+            a piece of music from my favorite anime,
+            "Steins;Gate," called "Gate of Steiner," so I
+            bought repair parts and fixed the keyboard to the
+            point of being playable enough. I practiced at
+            least 4 hours per day for a month. I filmed this
+            the same day I did the rap at Patrick's studio. I
+            wasn't able to play it perfectly, but I'll get
+            there.
+            <a
+              href="https://youtu.be/7YfOzt3L41U?si=q0ur7dCP80cptLGS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Link to bottom-right video
+            </a>
           </p>
         </div>
 
@@ -233,7 +302,24 @@ function closeImage() {
           </h3>
 
           <p>
-            (Caption Placeholder)
+            Like many of my other classmates, I am also here
+            to shamelessly submit an output from another
+            subject. Kidding, of course. But I think I've put
+            in enough effort for this video to be submitted
+            to two subjects. It genuinely looks simple, but
+            man, there's so much thinking ahead and timing
+            required to pull this off. My PC got so hot for
+            so long while recording this. I think, along with
+            editing, it took me more than 15 hours to finish
+            this. One thing that bothers me here is how it
+            sometimes looks like I'm reading a script when I
+            act like I'm looking at the participants. Doing
+            this reminded me of an older
+            <a
+              href="https://drive.google.com/file/d/1qXLptvGb6TukNll7naLCMI9UoIav1THl/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >video</a> of mine.
           </p>
         </div>
       </article>

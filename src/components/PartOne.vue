@@ -54,7 +54,13 @@ function closeImage() {
             <h3>Floor Art</h3>
 
             <p>
-              (Caption Placeholder)
+              This was our first activity in GEARTS and it was
+              a group project. I played the role of a co-leader
+              here. We didn't exactly have a leader either, but
+              I did my best to organize the group, gather
+              materials, and support the other members. The
+              resulting artwork turned out way better than
+              expected.
             </p>
           </div>
         </article>
@@ -83,7 +89,13 @@ function closeImage() {
             <h3>Meme</h3>
 
             <p>
-              (Caption Placeholder)
+              This was probably the most fun activity, mainly
+              because of the limitless ideas for humor,
+              especially within our generation. I had like 10
+              other ideas I could've submitted, but I picked
+              this one because this picture always makes me
+              laugh. Also, it was funny to view the memes
+              submitted by my other classmates.
             </p>
           </div>
         </article>
@@ -117,12 +129,13 @@ function closeImage() {
             </h3>
 
             <p>
-              My appropriation reimagines Caspar
-              David Friedrich's
+              This was the first time I've ever used AI to
+              submit an actual artwork. My appropriation
+              reimagines Caspar David Friedrich's
               <em>Wanderer Above the Sea of Fog</em>
-              as a student facing a sea of uncertainty
-              represented by school, career, family,
-              health, coding, and other responsibilities.
+              as a student (me) facing a sea of uncertainty
+              represented by school, career, family, health,
+              relationships, and other responsibilities.
             </p>
           </div>
         </article>
@@ -151,7 +164,13 @@ function closeImage() {
             <h3>Painting</h3>
 
             <p>
-              (Caption Placeholder)
+              I've always been attracted to the art style of
+              Pablo Picasso, so when I had a chance to try and
+              paint one, I did. This was an individual
+              activity, but while painting it, nobody really
+              felt alone because we were all huddled up in a
+              circle, sharing brushes, paint, ideas, and
+              laughs. It's my best painting evah!
             </p>
           </div>
         </article>
@@ -175,11 +194,23 @@ function closeImage() {
 
         <div class="video-copy">
           <h3>
-            Pressure
+            1 Minute Video
           </h3>
 
           <p>
-            (Caption Placeholder)
+            Although it wasn't official, I think I can say I
+            was the leader in this group activity. I thought
+            of the idea, approached the people we filmed, and
+            filmed all the shots except for the first one. It
+            was embarrassing at first to approach people and
+            ask if we could film them, but the pressure of
+            time was greater. This was probably the activity
+            with the most time pressure. In fact, we were
+            supposed to present this, but none of us were able
+            to due to the lack of time. But with all that
+            being said, credits to Zaki Goc since he was the
+            one who edited the video, and we were able to
+            submit on time at the very least.
           </p>
         </div>
       </article>
