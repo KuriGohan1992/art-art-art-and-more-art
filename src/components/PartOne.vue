@@ -1,3 +1,21 @@
+<script setup>
+import { ref } from 'vue'
+import ImageModal from './ImageModal.vue'
+
+const selectedImage = ref(null)
+
+function openImage(src, alt) {
+  selectedImage.value = {
+    src,
+    alt,
+  }
+}
+
+function closeImage() {
+  selectedImage.value = null
+}
+</script>
+
 <template>
   <section
     id="part-one"
@@ -13,11 +31,22 @@
       <!-- FLOOR ART + MEME -->
       <div class="two-work-grid">
         <article class="work-card floor-card">
-          <img
-            src="/part-1/floor-art.webp"
-            alt="Floor Art"
-            class="artwork-image"
-          />
+          <button
+            class="image-button"
+            type="button"
+            @click="
+              openImage(
+                '/part-1/floor-art.webp',
+                'Floor Art'
+              )
+            "
+          >
+            <img
+              src="/part-1/floor-art.webp"
+              alt="Floor Art"
+              class="artwork-image"
+            />
+          </button>
 
           <div class="media-divider"></div>
 
@@ -25,20 +54,28 @@
             <h3>Floor Art</h3>
 
             <p>
-              Add your short reflection about the
-              Floor Art activity here, including the
-              concept, materials, process, and what
-              you learned from creating it.
+              (Caption Placeholder)
             </p>
           </div>
         </article>
 
         <article class="work-card meme-card">
-          <img
-            src="/part-1/meme.webp"
-            alt="Meme"
-            class="artwork-image"
-          />
+          <button
+            class="image-button"
+            type="button"
+            @click="
+              openImage(
+                '/part-1/meme.webp',
+                'Meme'
+              )
+            "
+          >
+            <img
+              src="/part-1/meme.webp"
+              alt="Meme"
+              class="artwork-image"
+            />
+          </button>
 
           <div class="media-divider"></div>
 
@@ -46,23 +83,31 @@
             <h3>Meme</h3>
 
             <p>
-              Add your short explanation of the meme
-              here, including the artwork or idea
-              being referenced and how humor was used
-              to communicate it.
+              (Caption Placeholder)
             </p>
           </div>
         </article>
       </div>
 
-      <!-- AI APPROPRIATION + PAINTING -->
+      <!-- AI ART APPROPRIATION + PAINTING -->
       <div class="two-work-grid">
         <article class="work-card appropriation-card">
-          <img
-            src="/part-1/ai-art-appropriation.webp"
-            alt="AI Art Appropriation"
-            class="artwork-image"
-          />
+          <button
+            class="image-button"
+            type="button"
+            @click="
+              openImage(
+                '/part-1/ai-art-appropriation.webp',
+                'AI Art Appropriation'
+              )
+            "
+          >
+            <img
+              src="/part-1/ai-art-appropriation.webp"
+              alt="AI Art Appropriation"
+              class="artwork-image"
+            />
+          </button>
 
           <div class="media-divider"></div>
 
@@ -83,11 +128,22 @@
         </article>
 
         <article class="work-card painting-card">
-          <img
-            src="/part-1/painting.webp"
-            alt="Painting"
-            class="artwork-image"
-          />
+          <button
+            class="image-button"
+            type="button"
+            @click="
+              openImage(
+                '/part-1/painting.webp',
+                'Painting'
+              )
+            "
+          >
+            <img
+              src="/part-1/painting.webp"
+              alt="Painting"
+              class="artwork-image"
+            />
+          </button>
 
           <div class="media-divider"></div>
 
@@ -95,17 +151,13 @@
             <h3>Painting</h3>
 
             <p>
-              Add your short reflection about the
-              painting here, including its subject,
-              process, artistic choices, and what the
-              activity helped you understand about
-              painting.
+              (Caption Placeholder)
             </p>
           </div>
         </article>
       </div>
 
-      <!-- VIDEO -->
+      <!-- PRESSURE -->
       <article class="video-card">
         <div class="video-side">
           <video
@@ -118,9 +170,6 @@
               src="/part-1/one-minute-video.mp4"
               type="video/mp4"
             />
-
-            Your browser does not support the
-            video element.
           </video>
         </div>
 
@@ -130,16 +179,18 @@
           </h3>
 
           <p>
-            Add your final explanation here. You can
-            discuss how the video communicates
-            pressure through framing, close-ups,
-            camera angles, slow motion, editing,
-            performance, sound, and other cinematic
-            techniques.
+            (Caption Placeholder)
           </p>
         </div>
       </article>
     </div>
+
+    <ImageModal
+      v-if="selectedImage"
+      :src="selectedImage.src"
+      :alt="selectedImage.alt"
+      @close="closeImage"
+    />
   </section>
 </template>
 
@@ -180,12 +231,10 @@
     rgba(213, 166, 119, 0.92);
 
   border:
-    2px solid
-    #171717;
+    2px solid #171717;
 
   box-shadow:
-    8px 8px 0
-    #171717;
+    8px 8px 0 #171717;
 }
 
 .section-header h2 {
@@ -227,8 +276,14 @@
 }
 
 /* =========================
-   INDIVIDUAL WORK CARDS
+   PART I CARDS
    ========================= */
+
+/*
+  PART I RULE:
+  THE CARD MOVES.
+  THE IMAGE DOES NOT.
+*/
 
 .work-card {
   position: relative;
@@ -243,12 +298,10 @@
     );
 
   border:
-    2px solid
-    #171717;
+    2px solid #171717;
 
   box-shadow:
-    8px 8px 0
-    #171717;
+    8px 8px 0 #171717;
 
   transition:
     transform 160ms ease,
@@ -257,59 +310,50 @@
 
 .work-card:hover {
   transform:
-    translate(
-      -3px,
-      -3px
-    );
+    translate(-3px, -3px);
 
   box-shadow:
-    11px 11px 0
-    #171717;
+    11px 11px 0 #171717;
 }
 
 .floor-card {
   background:
-    rgba(
-      206,
-      215,
-      185,
-      0.92
-    );
+    rgba(206, 215, 185, 0.92);
 }
 
 .meme-card {
   background:
-    rgba(
-      199,
-      214,
-      225,
-      0.92
-    );
+    rgba(199, 214, 225, 0.92);
 }
 
 .appropriation-card {
   background:
-    rgba(
-      225,
-      208,
-      183,
-      0.92
-    );
+    rgba(225, 208, 183, 0.92);
 }
 
 .painting-card {
   background:
-    rgba(
-      221,
-      195,
-      188,
-      0.92
-    );
+    rgba(221, 195, 188, 0.92);
 }
 
 /* =========================
-   ARTWORK IMAGES
+   IMAGES
    ========================= */
+
+.image-button {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: zoom-in;
+}
 
 .artwork-image {
   display: block;
@@ -328,7 +372,12 @@
 
   margin: 0;
 
-  border-radius: 0;
+  /*
+    IMPORTANT:
+    no transition
+    no transform
+    no hover animation
+  */
 }
 
 /* =========================
@@ -349,41 +398,43 @@
 }
 
 /* =========================
-   ARTWORK TEXT
+   TEXT
    ========================= */
 
-.work-copy {
-  margin: 0;
-}
-
-.work-copy h3 {
+.work-copy h3,
+.video-copy h3 {
   margin:
     0
     0
-    8px;
+    10px;
 
   font-size:
     clamp(
-      1.6rem,
-      2.1vw,
-      2.2rem
+      1.8rem,
+      2.5vw,
+      2.8rem
     );
 
   line-height: 1.05;
 }
 
-.work-copy p {
-  max-width: 650px;
-
+.work-copy p,
+.video-copy p {
   margin: 0;
 
   font-size: 1rem;
-  line-height: 1.65;
+
+  line-height: 1.7;
 }
 
 /* =========================
-   VIDEO
+   PRESSURE
    ========================= */
+
+/*
+  PRESSURE RULE:
+  completely static container.
+*/
 
 .video-card {
   display: grid;
@@ -396,23 +447,14 @@
 
   gap: 0;
 
-  padding: 0;
-
   background:
-    rgba(
-      202,
-      196,
-      218,
-      0.92
-    );
+    rgba(202, 196, 218, 0.92);
 
   border:
-    2px solid
-    #171717;
+    2px solid #171717;
 
   box-shadow:
-    8px 8px 0
-    #171717;
+    8px 8px 0 #171717;
 }
 
 .video-side {
@@ -424,22 +466,18 @@
     );
 
   border-right:
-    2px solid
-    #171717;
+    2px solid #171717;
 }
 
 .video {
   display: block;
 
   width: 100%;
-  height: auto;
 
   aspect-ratio:
     16 / 9;
 
   object-fit: contain;
-
-  border-radius: 0;
 
   background: #111;
 }
@@ -455,27 +493,6 @@
       3vw,
       38px
     );
-}
-
-.video-copy h3 {
-  margin:
-    0
-    0
-    14px;
-
-  font-size:
-    clamp(
-      2rem,
-      3vw,
-      3rem
-    );
-}
-
-.video-copy p {
-  margin: 0;
-
-  font-size: 1rem;
-  line-height: 1.7;
 }
 
 /* =========================
@@ -499,8 +516,7 @@
     border-right: 0;
 
     border-bottom:
-      2px solid
-      #171717;
+      2px solid #171717;
   }
 }
 
@@ -522,8 +538,7 @@
     padding: 18px;
 
     box-shadow:
-      5px 5px 0
-      #171717;
+      5px 5px 0 #171717;
   }
 
   .section-header h2 {
@@ -536,8 +551,7 @@
   }
 
   .two-work-grid {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
     gap: 20px;
 
@@ -548,16 +562,18 @@
     padding: 16px;
 
     box-shadow:
-      5px 5px 0
-      #171717;
+      5px 5px 0 #171717;
   }
+
+  /*
+    No meaningful hover on touch screens.
+  */
 
   .work-card:hover {
     transform: none;
 
     box-shadow:
-      5px 5px 0
-      #171717;
+      5px 5px 0 #171717;
   }
 
   .artwork-image {
@@ -568,8 +584,7 @@
 
   .video-card {
     box-shadow:
-      5px 5px 0
-      #171717;
+      5px 5px 0 #171717;
   }
 }
 </style>
