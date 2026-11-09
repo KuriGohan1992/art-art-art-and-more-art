@@ -118,8 +118,10 @@ main {
     rgba(218, 200, 177, 0.82);
 
   border:
-    1px solid
-    rgba(65, 46, 30, 0.2);
+    2px solid #171717;
+
+  box-shadow:
+    8px 8px 0 #171717;
 
   border-radius: 0;
 }
@@ -201,10 +203,7 @@ main {
 
   border:
     3px solid
-    rgba(255, 255, 255, 0.92);
-
-  background:
-    rgba(218, 200, 177, 0.65);
+    rgba(0, 0, 0, 1);
 
   box-shadow:
     0
