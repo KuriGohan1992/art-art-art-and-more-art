@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
 :root {
   --page-max-width: 1600px;
   --page-padding: 32px;
@@ -78,11 +79,9 @@ main {
   margin: 0 auto;
 }
 
-/*
-  Fixed-content columns instead of allowing
-  the portrait to be pushed all the way
-  toward the far right side.
-*/
+/* =========================
+   FRONT MATTER TOP
+   ========================= */
 
 .front-matter-top {
   display: grid;
@@ -100,7 +99,6 @@ main {
       32px
     );
 }
-
 
 /* =========================
    INTRO PANEL
@@ -178,15 +176,6 @@ main {
    PROFILE PHOTO
    ========================= */
 
-/*
-  The portrait stays circular because that
-  was an intentional design choice.
-
-  It is now substantially bigger and closer
-  to the intro panel.
-*/
-
-
 .profile-photo-wrapper {
   justify-self: center;
 
@@ -226,132 +215,8 @@ main {
 }
 
 /* =========================
-   TABLE OF CONTENTS
+   UNUSED FUTURE SECTION
    ========================= */
-
-.contents {
-  margin-top:
-    clamp(
-      30px,
-      4vh,
-      44px
-    );
-}
-
-.contents-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-bottom: 10px;
-
-  color: white;
-
-  font-size: 0.7rem;
-  font-weight: 800;
-
-  letter-spacing: 0.16em;
-
-  text-shadow:
-    0
-    1px
-    3px
-    rgba(0, 0, 0, 0.8);
-}
-
-.contents-heading p {
-  margin: 0;
-}
-
-.contents-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      4,
-      minmax(0, 1fr)
-    );
-
-  gap: 10px;
-}
-
-.contents-item {
-  display: grid;
-
-  grid-template-columns:
-    auto
-    1fr
-    auto;
-
-  gap: 14px;
-
-  min-height: 104px;
-
-  padding: 16px;
-
-  color: #171717;
-
-  background:
-    rgba(213, 216, 190, 0.90);
-
-  border:
-    1px solid
-    rgba(25, 25, 25, 0.16);
-
-  border-radius: 0;
-
-  text-decoration: none;
-
-  transition:
-    transform 160ms ease,
-    background 160ms ease;
-}
-
-.contents-item:hover {
-  transform:
-    translateY(-3px);
-
-  background:
-    rgba(225, 228, 204, 0.96);
-}
-
-.contents-number {
-  font-size: 0.66rem;
-  font-weight: 800;
-}
-
-.contents-item h2 {
-  margin: 0;
-
-  font-size:
-    clamp(
-      1.15rem,
-      1.5vw,
-      1.55rem
-    );
-
-  line-height: 1;
-
-  letter-spacing:
-    -0.025em;
-}
-
-.contents-item p {
-  margin:
-    8px
-    0
-    0;
-
-  font-size: 0.76rem;
-
-  line-height: 1.4;
-
-  opacity: 0.72;
-}
-
-.contents-arrow {
-  font-size: 1rem;
-}
 
 .future-section {
   min-height: 1px;
@@ -368,14 +233,6 @@ main {
       minmax(320px, 420px);
 
     gap: 20px;
-  }
-
-  .contents-grid {
-    grid-template-columns:
-      repeat(
-        2,
-        minmax(0, 1fr)
-      );
   }
 }
 
@@ -435,18 +292,6 @@ main {
       );
 
     margin: 0 auto;
-  }
-
-  .contents {
-    margin-top: 28px;
-  }
-
-  .contents-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contents-item {
-    min-height: 92px;
   }
 }
 
