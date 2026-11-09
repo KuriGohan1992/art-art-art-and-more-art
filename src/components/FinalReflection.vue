@@ -15,35 +15,30 @@
         <article class="reflection-card">
           <div class="reflection-copy">
             <p>
-              Before taking Art Appreciation, I often thought of art mainly
-              in terms of the finished work: a drawing, a painting, a song,
-              or a performance. Throughout the course, I became more aware
-              of everything behind that final result—the choices of medium,
-              composition, technique, context, presentation, and the meaning
-              that both the artist and the audience can bring to a work.
+              Before taking Art Appreciation, I mostly thought of art as the finished product: a drawing, a painting, a song, or a performance. I also never really thought of myself as an artist. Looking back at this portfolio, I realized that art is not only about what is produced in the end, but also about the effort, choices, mistakes, and experiences behind it.
+
             </p>
 
             <p>
-              The activities in Part I allowed me to experience art through
-              structured exercises, from visual works and appropriation to
-              video. Part II gave me more freedom to explore practices that
-              are either familiar to me or outside the usual forms I associate
-              with schoolwork, such as traditional drawing, origami, rapping,
-              playing the keyboard, and roleplaying. Seeing these works
-              together made me realize that my creative interests do not fit
-              neatly into only one medium.
+              One pattern I noticed is that I rarely create something for no reason. I usually become interested in something first, then that interest pushes me to make something. I drew because I liked a character, painted because I was curious about Picasso’s style, learned a keyboard piece because it came from an anime I liked, and tried rapping because I wanted to see if I could actually perform the song. Even origami started because I simply found something that looked cool.
+
             </p>
 
             <p>
-              Moving forward, I want to continue approaching art with more
-              curiosity and intention. I do not think I need to become one
-              specific kind of artist. Instead, I want to keep experimenting,
-              learning unfamiliar forms, improving the skills I already have,
-              and finding ways to combine creativity with the other things I
-              enjoy. More than anything, this course changed art from something
-              I simply make or observe into something I now think about,
-              interpret, and understand more consciously.
+              Some activities also surprised me by being much harder than they looked. Origami became a test of patience, playing the keyboard required weeks of practice, and rapping taught me that breathing and timing mattered just as much as speaking quickly. These experiences made me appreciate the amount of skill behind things that can look simple when done well.
+
             </p>
+
+            <p>
+              If a stranger explored this portfolio, they might think I am constantly making art, but that isn't really true. I can go years without drawing or practicing some of these skills. What this portfolio represents more accurately is that when something genuinely catches my interest, I can become deeply invested in it.
+
+            </p>
+
+            <p>
+              Looking forward, I still don't think I am becoming one specific kind of artist. I would rather keep art as something I can return to whenever an idea, character, song, story, or challenge makes me want to create again. Art may not become the center of my life, but I think it will continue to be one of the ways I explore my interests, express what I care about, and discover things I didn't expect myself to be able to do.
+
+            </p>
+
           </div>
         </article>
 
@@ -183,27 +178,22 @@
 
 .reflection-copy {
   width: min(
-    790px,
+    990px,
     100%
   );
 
   margin: 0 auto;
 }
-
 .reflection-copy p {
   margin:
     0
     0
-    26px;
+    24px;
 
-  font-size:
-    clamp(
-      1rem,
-      1.15vw,
-      1.12rem
-    );
+  line-height: 1.65;
 
-  line-height: 1.8;
+  text-align: justify;
+  text-indent: 2em;
 }
 
 .reflection-copy p:last-child {
