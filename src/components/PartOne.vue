@@ -10,10 +10,7 @@
         </h2>
       </header>
 
-      <!-- =========================
-           FLOOR ART + MEME
-           ========================= -->
-
+      <!-- FLOOR ART + MEME -->
       <div class="two-work-grid">
         <article class="work-card floor-card">
           <img
@@ -21,6 +18,8 @@
             alt="Floor Art"
             class="artwork-image"
           />
+
+          <div class="media-divider"></div>
 
           <div class="work-copy">
             <h3>Floor Art</h3>
@@ -41,6 +40,8 @@
             class="artwork-image"
           />
 
+          <div class="media-divider"></div>
+
           <div class="work-copy">
             <h3>Meme</h3>
 
@@ -54,10 +55,7 @@
         </article>
       </div>
 
-      <!-- =========================
-           AI APPROPRIATION + PAINTING
-           ========================= -->
-
+      <!-- AI APPROPRIATION + PAINTING -->
       <div class="two-work-grid">
         <article class="work-card appropriation-card">
           <img
@@ -65,6 +63,8 @@
             alt="AI Art Appropriation"
             class="artwork-image"
           />
+
+          <div class="media-divider"></div>
 
           <div class="work-copy">
             <h3>
@@ -77,8 +77,7 @@
               <em>Wanderer Above the Sea of Fog</em>
               as a student facing a sea of uncertainty
               represented by school, career, family,
-              health, coding, and other
-              responsibilities.
+              health, coding, and other responsibilities.
             </p>
           </div>
         </article>
@@ -89,6 +88,8 @@
             alt="Painting"
             class="artwork-image"
           />
+
+          <div class="media-divider"></div>
 
           <div class="work-copy">
             <h3>Painting</h3>
@@ -104,25 +105,24 @@
         </article>
       </div>
 
-      <!-- =========================
-           VIDEO
-           ========================= -->
-
+      <!-- VIDEO -->
       <article class="video-card">
-        <video
-          class="video"
-          controls
-          preload="metadata"
-          playsinline
-        >
-          <source
-            src="/part-1/one-minute-video.mp4"
-            type="video/mp4"
-          />
+        <div class="video-side">
+          <video
+            class="video"
+            controls
+            preload="metadata"
+            playsinline
+          >
+            <source
+              src="/part-1/one-minute-video.mp4"
+              type="video/mp4"
+            />
 
-          Your browser does not support the
-          video element.
-        </video>
+            Your browser does not support the
+            video element.
+          </video>
+        </div>
 
         <div class="video-copy">
           <h3>
@@ -164,24 +164,28 @@
 }
 
 /* =========================
-   TITLE
+   SECTION TITLE
    ========================= */
 
 .section-header {
   width: 100%;
 
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
   padding:
     22px
     28px;
 
   background:
-    rgba(213, 166, 119, 0.9);
+    rgba(213, 166, 119, 0.92);
 
   border:
-    1px solid
-    rgba(65, 46, 30, 0.25);
+    2px solid
+    #171717;
+
+  box-shadow:
+    8px 8px 0
+    #171717;
 }
 
 .section-header h2 {
@@ -219,7 +223,7 @@
       34px
     );
 
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 /* =========================
@@ -227,6 +231,8 @@
    ========================= */
 
 .work-card {
+  position: relative;
+
   min-width: 0;
 
   padding:
@@ -237,53 +243,79 @@
     );
 
   border:
-    1px solid
-    rgba(25, 25, 25, 0.18);
+    2px solid
+    #171717;
+
+  box-shadow:
+    8px 8px 0
+    #171717;
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
 }
 
-/*
-  Different muted colors so the page feels
-  more like a playful exhibition rather than
-  a stack of identical white cards.
-*/
+.work-card:hover {
+  transform:
+    translate(
+      -3px,
+      -3px
+    );
+
+  box-shadow:
+    11px 11px 0
+    #171717;
+}
 
 .floor-card {
   background:
-    rgba(206, 215, 185, 0.92);
+    rgba(
+      206,
+      215,
+      185,
+      0.92
+    );
 }
 
 .meme-card {
   background:
-    rgba(199, 214, 225, 0.92);
+    rgba(
+      199,
+      214,
+      225,
+      0.92
+    );
 }
 
 .appropriation-card {
   background:
-    rgba(225, 208, 183, 0.92);
+    rgba(
+      225,
+      208,
+      183,
+      0.92
+    );
 }
 
 .painting-card {
   background:
-    rgba(221, 195, 188, 0.92);
+    rgba(
+      221,
+      195,
+      188,
+      0.92
+    );
 }
 
 /* =========================
    ARTWORK IMAGES
    ========================= */
 
-/*
-  Every image gets the same display height.
-
-  object-fit: contain means:
-  - no cropping
-  - no stretching
-  - original aspect ratio is preserved
-*/
-
 .artwork-image {
   display: block;
 
   width: 100%;
+
   height:
     clamp(
       380px,
@@ -292,7 +324,6 @@
     );
 
   object-fit: contain;
-
   object-position: center;
 
   margin: 0;
@@ -301,11 +332,28 @@
 }
 
 /* =========================
+   DIVIDER
+   ========================= */
+
+.media-divider {
+  width: 100%;
+  height: 2px;
+
+  margin:
+    20px
+    0
+    16px;
+
+  background:
+    #171717;
+}
+
+/* =========================
    ARTWORK TEXT
    ========================= */
 
 .work-copy {
-  margin-top: 18px;
+  margin: 0;
 }
 
 .work-copy h3 {
@@ -344,15 +392,30 @@
     minmax(0, 1.6fr)
     minmax(280px, 0.7fr);
 
-  align-items: center;
+  align-items: stretch;
 
-  gap:
-    clamp(
-      24px,
-      3vw,
-      50px
+  gap: 0;
+
+  padding: 0;
+
+  background:
+    rgba(
+      202,
+      196,
+      218,
+      0.92
     );
 
+  border:
+    2px solid
+    #171717;
+
+  box-shadow:
+    8px 8px 0
+    #171717;
+}
+
+.video-side {
   padding:
     clamp(
       18px,
@@ -360,12 +423,9 @@
       32px
     );
 
-  background:
-    rgba(202, 196, 218, 0.92);
-
-  border:
-    1px solid
-    rgba(25, 25, 25, 0.18);
+  border-right:
+    2px solid
+    #171717;
 }
 
 .video {
@@ -374,13 +434,27 @@
   width: 100%;
   height: auto;
 
-  aspect-ratio: 16 / 9;
+  aspect-ratio:
+    16 / 9;
 
   object-fit: contain;
 
   border-radius: 0;
 
   background: #111;
+}
+
+.video-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    clamp(
+      22px,
+      3vw,
+      38px
+    );
 }
 
 .video-copy h3 {
@@ -420,6 +494,14 @@
   .video-card {
     grid-template-columns: 1fr;
   }
+
+  .video-side {
+    border-right: 0;
+
+    border-bottom:
+      2px solid
+      #171717;
+  }
 }
 
 /* =========================
@@ -435,10 +517,13 @@
   }
 
   .section-header {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
-    padding:
-      18px;
+    padding: 18px;
+
+    box-shadow:
+      5px 5px 0
+      #171717;
   }
 
   .section-header h2 {
@@ -451,15 +536,28 @@
   }
 
   .two-work-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
 
-    gap: 18px;
+    gap: 20px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .work-card {
     padding: 16px;
+
+    box-shadow:
+      5px 5px 0
+      #171717;
+  }
+
+  .work-card:hover {
+    transform: none;
+
+    box-shadow:
+      5px 5px 0
+      #171717;
   }
 
   .artwork-image {
@@ -469,9 +567,9 @@
   }
 
   .video-card {
-    gap: 18px;
-
-    padding: 16px;
+    box-shadow:
+      5px 5px 0
+      #171717;
   }
 }
 </style>
