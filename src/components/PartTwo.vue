@@ -233,8 +233,7 @@ function closeImage() {
             Philippines. I hear it all the time, and I was
             confident that I could talk pretty fast. So I
             memorized the lyrics, then I approached one of my
-            classmates, John Patrick Piamonte (if you're
-            reading this, Doc J, you know him for sure). He
+            classmates, John Patrick Piamonte. He
             has a studio for rent where he let me record for
             dirt cheap compared to normal. Then I learned
             that the hard part wasn't talking fast; it was
@@ -242,7 +241,7 @@ function closeImage() {
             hear me mistime my breaths in the video. Also, I
             added the oldie damaged-film effect because one
             of the phones I used to record was pretty blurry,
-            so I might as well commit to that, and it fits
+            so I might as well commit to that, it fits
             the era of the song perfectly too.
           </p>
         </div>
