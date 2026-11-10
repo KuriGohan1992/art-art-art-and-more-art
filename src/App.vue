@@ -1,5 +1,5 @@
 <script setup>
-
+import BackgroundMusic from './components/BackgroundMusic.vue'
 import CollageBackground from './components/CollageBackground.vue'
 import Navbar from './components/Navbar.vue'
 import PartOne from './components/PartOne.vue'
@@ -10,7 +10,7 @@ import Appendices from './components/Appendices.vue'
 
 <template>
   <div class="site">
-  
+    <BackgroundMusic />
     <CollageBackground />
 
     <Navbar />

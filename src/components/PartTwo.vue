@@ -313,13 +313,7 @@ function closeImage() {
             editing, it took me more than 15 hours to finish
             this. One thing that bothers me here is how it
             sometimes looks like I'm reading a script when I
-            act like I'm looking at the participants. Doing
-            this reminded me of an older
-            <a
-              href="https://drive.google.com/file/d/1qXLptvGb6TukNll7naLCMI9UoIav1THl/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >video</a> of mine.
+            act like I'm looking at the meet participants. 
           </p>
         </div>
       </article>

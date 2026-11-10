@@ -61,6 +61,8 @@ function loadImageData(src) {
         ratio:
           image.naturalWidth /
           image.naturalHeight,
+        naturallyMonochrome:
+          src.includes('/drawing_'),
       })
     }
 
@@ -72,6 +74,8 @@ function loadImageData(src) {
       resolve({
         src,
         ratio: 1,
+        naturallyMonochrome:
+          src.includes('/drawing_'),
       })
     }
 
@@ -121,6 +125,89 @@ function createBatch(images, cycle) {
       uid:
         `${cycle}-${index}-${image.src}`,
     }),
+  )
+}
+
+function applyAlternatingGrayscale(
+  rowImages,
+  rowIndex,
+) {
+  /*
+    Each row can start in one of two ways:
+
+    COLOR | B&W | COLOR | B&W
+    B&W   | COLOR | B&W | COLOR
+
+    Drawing images are already visually
+    monochrome, so we treat them as B&W
+    without applying an extra filter.
+
+    We choose whichever starting pattern
+    places more drawing images into the
+    B&W positions naturally.
+  */
+  function countDrawingConflicts(phase) {
+    return rowImages.reduce(
+      (conflicts, image, index) => {
+        if (!image.naturallyMonochrome) {
+          return conflicts
+        }
+
+        const shouldLookMonochrome =
+          (index + phase) % 2 === 1
+
+        return conflicts +
+          (shouldLookMonochrome ? 0 : 1)
+      },
+      0,
+    )
+  }
+
+  /*
+    Alternate the preferred starting phase
+    between rows so the overall collage feels
+    closer to a checkerboard.
+  */
+  const preferredPhase =
+    rowIndex % 2
+
+  const alternatePhase =
+    preferredPhase === 0 ? 1 : 0
+
+  const preferredConflicts =
+    countDrawingConflicts(
+      preferredPhase,
+    )
+
+  const alternateConflicts =
+    countDrawingConflicts(
+      alternatePhase,
+    )
+
+  const phase =
+    preferredConflicts <= alternateConflicts
+      ? preferredPhase
+      : alternatePhase
+
+  return rowImages.map(
+    (image, index) => {
+      const shouldLookMonochrome =
+        (index + phase) % 2 === 1
+
+      return {
+        ...image,
+
+        /*
+          Never grayscale drawings.
+
+          They already count as monochrome
+          when choosing the row pattern.
+        */
+        grayscale:
+          !image.naturallyMonochrome &&
+          shouldLookMonochrome,
+      }
+    },
   )
 }
 
@@ -206,7 +293,11 @@ function createRows(
         height:
           width / totalRatio,
 
-        images: rowImages,
+        images:
+          applyAlternatingGrayscale(
+            rowImages,
+            index,
+          ),
       }
     },
   )
@@ -408,6 +499,10 @@ onBeforeUnmount(() => {
             >
               <img
                 :src="image.src"
+                :class="{
+                  'is-grayscale':
+                    image.grayscale,
+                }"
                 alt=""
                 draggable="false"
                 decoding="async"
@@ -422,21 +517,6 @@ onBeforeUnmount(() => {
       class="collage-overlay"
     ></div>
   </div>
-
-  <button
-    class="motion-toggle"
-    type="button"
-    :aria-pressed="
-      motionStopped
-    "
-    @click="togglePause"
-  >
-    {{
-      isPaused
-        ? 'Resume Background'
-        : 'Stop Background'
-    }}
-  </button>
 </template>
 
 <style scoped>
@@ -559,11 +639,17 @@ onBeforeUnmount(() => {
 
   object-fit: cover;
 
+  filter: none;
+
   /*
-    No grayscale.
-    No animated filters.
-    No opacity animation.
+    Filters are assigned deliberately in
+    JavaScript so naturally B&W drawings
+    can count as monochrome tiles.
   */
+}
+
+.collage-item img.is-grayscale {
+  filter: grayscale(100%);
 }
 
 /*
@@ -679,7 +765,7 @@ onBeforeUnmount(() => {
     only 16 source images.
 
     It also has:
-    - no grayscale
+    - the same drawing-aware grayscale pattern
     - no filter transitions
     - no backdrop blur
     - no per-image animation
