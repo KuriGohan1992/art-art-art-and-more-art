@@ -28,7 +28,10 @@ function closeImage() {
         </h2>
       </header>
 
-      <!-- FLOOR ART + MEME -->
+      <!-- =========================
+           FLOOR ART + MEME
+           ========================= -->
+
       <div class="two-work-grid">
         <article class="work-card floor-card">
           <button
@@ -51,7 +54,9 @@ function closeImage() {
           <div class="media-divider"></div>
 
           <div class="work-copy">
-            <h3>Floor Art</h3>
+            <h3>
+              Floor Art
+            </h3>
 
             <p>
               This was our first activity in GEARTS and it was
@@ -86,7 +91,9 @@ function closeImage() {
           <div class="media-divider"></div>
 
           <div class="work-copy">
-            <h3>Meme</h3>
+            <h3>
+              Meme
+            </h3>
 
             <p>
               This was probably the most fun activity, mainly
@@ -101,7 +108,10 @@ function closeImage() {
         </article>
       </div>
 
-      <!-- AI ART APPROPRIATION + PAINTING -->
+      <!-- =========================
+           AI ART + PAINTING
+           ========================= -->
+
       <div class="two-work-grid">
         <article class="work-card appropriation-card">
           <button
@@ -161,7 +171,9 @@ function closeImage() {
           <div class="media-divider"></div>
 
           <div class="work-copy">
-            <h3>Painting</h3>
+            <h3>
+              Painting
+            </h3>
 
             <p>
               I've always been attracted to the art style of
@@ -176,11 +188,52 @@ function closeImage() {
         </article>
       </div>
 
-      <!-- PRESSURE -->
-      <article class="video-card">
-        <div class="video-side">
+      <!-- =========================
+           ARTWORK ANALYSIS
+           ========================= -->
+
+      <article
+        class="
+          performance-card
+          analysis-card
+        "
+      >
+        <div class="performance-copy">
+          <h3>
+            Artwork Analysis
+          </h3>
+
+          <p>
+            This was a group activity where I was the designated leader of our group. We decided to pick this song because we have deeply connected with it in our theater performance for GEWORLD during our freshman year. My contributions here aside from managing and leading were building a script, contributing to the research, and refining the powerpoint presentation. Listening to the song brought back a lot of good memories from our theater play, and also reminded me of some of our classmates who are no longer with us (they either shifted, dropped, or moved to another country).
+          </p>
+        </div>
+
+        <div class="performance-media">
           <video
-            class="video"
+            controls
+            preload="metadata"
+            playsinline
+          >
+            <source
+              src="/part-1/artwork-analysis.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </article>
+
+      <!-- =========================
+           1 MINUTE VIDEO
+           ========================= -->
+
+      <article
+        class="
+          performance-card
+          minute-card
+        "
+      >
+        <div class="performance-media">
+          <video
             controls
             preload="metadata"
             playsinline
@@ -192,7 +245,7 @@ function closeImage() {
           </video>
         </div>
 
-        <div class="video-copy">
+        <div class="performance-copy">
           <h3>
             1 Minute Video
           </h3>
@@ -284,7 +337,7 @@ function closeImage() {
 }
 
 /* =========================
-   TWO-COLUMN ROW
+   TWO-COLUMN ARTWORK ROWS
    ========================= */
 
 .two-work-grid {
@@ -307,13 +360,13 @@ function closeImage() {
 }
 
 /* =========================
-   PART I CARDS
+   PART I ARTWORK CARDS
    ========================= */
 
 /*
   PART I RULE:
-  THE CARD MOVES.
-  THE IMAGE DOES NOT.
+  Card moves on hover.
+  Image itself stays still.
 */
 
 .work-card {
@@ -402,17 +455,10 @@ function closeImage() {
   object-position: center;
 
   margin: 0;
-
-  /*
-    IMPORTANT:
-    no transition
-    no transform
-    no hover animation
-  */
 }
 
 /* =========================
-   DIVIDER
+   ARTWORK DIVIDER
    ========================= */
 
 .media-divider {
@@ -433,7 +479,7 @@ function closeImage() {
    ========================= */
 
 .work-copy h3,
-.video-copy h3 {
+.performance-copy h3 {
   margin:
     0
     0
@@ -450,7 +496,9 @@ function closeImage() {
 }
 
 .work-copy p,
-.video-copy p {
+.performance-copy p {
+  width: 100%;
+
   margin: 0;
 
   font-size: 1rem;
@@ -459,27 +507,28 @@ function closeImage() {
 }
 
 /* =========================
-   PRESSURE
+   VIDEO / PERFORMANCE CARDS
    ========================= */
 
 /*
-  PRESSURE RULE:
-  completely static container.
+  These intentionally use the same layout
+  structure as Part II performance cards.
 */
 
-.video-card {
+.performance-card {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.6fr)
+    minmax(0, 1.55fr)
     minmax(280px, 0.7fr);
 
   align-items: stretch;
 
   gap: 0;
 
-  background:
-    rgba(202, 196, 218, 0.92);
+  padding: 0;
+
+  margin-bottom: 34px;
 
   border:
     2px solid #171717;
@@ -488,19 +537,21 @@ function closeImage() {
     8px 8px 0 #171717;
 }
 
-.video-side {
+.performance-media {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
   padding:
     clamp(
       18px,
       2.5vw,
-      32px
+      30px
     );
-
-  border-right:
-    2px solid #171717;
 }
 
-.video {
+.performance-media video {
   display: block;
 
   width: 100%;
@@ -513,17 +564,63 @@ function closeImage() {
   background: #111;
 }
 
-.video-copy {
+.performance-copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
+  min-width: 0;
+
   padding:
     clamp(
-      22px,
+      24px,
       3vw,
-      38px
+      42px
     );
+
+  border-left:
+    2px solid #171717;
+}
+
+/* =========================
+   ARTWORK ANALYSIS
+   ========================= */
+
+/*
+  Desktop:
+  text LEFT
+  video RIGHT
+*/
+
+.analysis-card {
+  grid-template-columns:
+    minmax(280px, 0.7fr)
+    minmax(0, 1.55fr);
+
+  background:
+    rgba(180, 207, 203, 0.94);
+}
+
+.analysis-card .performance-copy {
+  border-left: 0;
+
+  border-right:
+    2px solid #171717;
+}
+
+/* =========================
+   1 MINUTE VIDEO
+   ========================= */
+
+/*
+  Desktop:
+  video LEFT
+  text RIGHT
+*/
+
+.minute-card {
+  background:
+    rgba(202, 196, 218, 0.94);
 }
 
 /* =========================
@@ -539,14 +636,30 @@ function closeImage() {
     height: 430px;
   }
 
-  .video-card {
+  .performance-card,
+  .analysis-card {
     grid-template-columns: 1fr;
   }
 
-  .video-side {
+  /*
+    Mobile/tablet ordering matches Part II:
+    video first, text second.
+  */
+
+  .analysis-card .performance-media {
+    order: 1;
+  }
+
+  .analysis-card .performance-copy {
+    order: 2;
+  }
+
+  .performance-copy,
+  .analysis-card .performance-copy {
+    border-left: 0;
     border-right: 0;
 
-    border-bottom:
+    border-top:
       2px solid #171717;
   }
 }
@@ -597,7 +710,7 @@ function closeImage() {
   }
 
   /*
-    No meaningful hover on touch screens.
+    No meaningful hover movement on touch.
   */
 
   .work-card:hover {
@@ -613,9 +726,19 @@ function closeImage() {
     max-height: 520px;
   }
 
-  .video-card {
+  .performance-card {
+    margin-bottom: 20px;
+
     box-shadow:
       5px 5px 0 #171717;
+  }
+
+  .performance-media {
+    padding: 16px;
+  }
+
+  .performance-copy {
+    padding: 20px;
   }
 }
 </style>
