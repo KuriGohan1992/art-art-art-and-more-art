@@ -29,24 +29,28 @@ function closeImage() {
       </header>
 
       <!-- =========================
-           FLOOR ART + MEME
+           NATURE ART + MEME
            ========================= -->
 
       <div class="two-work-grid">
         <article class="work-card floor-card">
+          <div class="work-type-tab">
+            Nature Art
+          </div>
+
           <button
             class="image-button"
             type="button"
             @click="
               openImage(
                 '/part-1/floor-art.webp',
-                'Floor Art'
+                'The Flower of Power'
               )
             "
           >
             <img
               src="/part-1/floor-art.webp"
-              alt="Floor Art"
+              alt="The Flower of Power"
               class="artwork-image"
             />
           </button>
@@ -55,7 +59,7 @@ function closeImage() {
 
           <div class="work-copy">
             <h3>
-              Floor Art
+              The Flower of Power
             </h3>
 
             <p>
@@ -71,19 +75,23 @@ function closeImage() {
         </article>
 
         <article class="work-card meme-card">
+          <div class="work-type-tab">
+            Meme
+          </div>
+
           <button
             class="image-button"
             type="button"
             @click="
               openImage(
                 '/part-1/meme.webp',
-                'Meme'
+                `The Neighbor's Kid`
               )
             "
           >
             <img
               src="/part-1/meme.webp"
-              alt="Meme"
+              alt="The Neighbor's Kid"
               class="artwork-image"
             />
           </button>
@@ -92,7 +100,7 @@ function closeImage() {
 
           <div class="work-copy">
             <h3>
-              Meme
+              The Neighbor's Kid
             </h3>
 
             <p>
@@ -114,19 +122,23 @@ function closeImage() {
 
       <div class="two-work-grid">
         <article class="work-card appropriation-card">
+          <div class="work-type-tab">
+            AI Art Appropriation
+          </div>
+
           <button
             class="image-button"
             type="button"
             @click="
               openImage(
                 '/part-1/ai-art-appropriation.webp',
-                'AI Art Appropriation'
+                'Wanderer Above the Sea of Uncertainty'
               )
             "
           >
             <img
               src="/part-1/ai-art-appropriation.webp"
-              alt="AI Art Appropriation"
+              alt="Wanderer Above the Sea of Uncertainty"
               class="artwork-image"
             />
           </button>
@@ -135,7 +147,7 @@ function closeImage() {
 
           <div class="work-copy">
             <h3>
-              AI Art Appropriation
+              Wanderer Above the Sea of Uncertainty
             </h3>
 
             <p>
@@ -151,19 +163,23 @@ function closeImage() {
         </article>
 
         <article class="work-card painting-card">
+          <div class="work-type-tab">
+            Painting
+          </div>
+
           <button
             class="image-button"
             type="button"
             @click="
               openImage(
                 '/part-1/painting.webp',
-                'Painting'
+                'The Protanomaly'
               )
             "
           >
             <img
               src="/part-1/painting.webp"
-              alt="Painting"
+              alt="The Protanomaly"
               class="artwork-image"
             />
           </button>
@@ -172,7 +188,7 @@ function closeImage() {
 
           <div class="work-copy">
             <h3>
-              Painting
+              The Protanomaly
             </h3>
 
             <p>
@@ -182,7 +198,7 @@ function closeImage() {
               activity, but while painting it, nobody really
               felt alone because we were all huddled up in a
               circle, sharing brushes, paint, ideas, and
-              laughs. It's my best painting evah!
+              laughs. The title is inspired from the type of colorblindness I have, I painted the piece as how I saw it. It's my best painting evah!
             </p>
           </div>
         </article>
@@ -198,13 +214,28 @@ function closeImage() {
           analysis-card
         "
       >
+        <div class="work-type-tab">
+          Artwork Analysis
+        </div>
+
         <div class="performance-copy">
           <h3>
-            Artwork Analysis
+            Tatsulok
           </h3>
 
           <p>
-            This was a group activity where I was the designated leader of our group. We decided to pick this song because we have deeply connected with it in our theater performance for GEWORLD during our freshman year. My contributions here aside from managing and leading were building a script, contributing to the research, and refining the powerpoint presentation. Listening to the song brought back a lot of good memories from our theater play, and also reminded me of some of our classmates who are no longer with us (they either shifted, dropped, or moved to another country).
+            This was a group activity where I was the
+            designated leader of our group. We decided to pick
+            this song because we have deeply connected with it
+            in our theater performance for GEWORLD during our
+            freshman year. My contributions here aside from
+            managing and leading were building a script,
+            contributing to the research, and refining the
+            powerpoint presentation. Listening to the song
+            brought back a lot of good memories from our
+            theater play, and also reminded me of some of our
+            classmates who are no longer with us (they either
+            shifted, dropped, or moved to another country).
           </p>
         </div>
 
@@ -230,8 +261,13 @@ function closeImage() {
         class="
           performance-card
           minute-card
+          description-right
         "
       >
+        <div class="work-type-tab">
+          1 Minute Video
+        </div>
+
         <div class="performance-media">
           <video
             controls
@@ -247,7 +283,7 @@ function closeImage() {
 
         <div class="performance-copy">
           <h3>
-            1 Minute Video
+            Pressure
           </h3>
 
           <p>
@@ -287,6 +323,8 @@ function closeImage() {
     110px
     var(--page-padding)
     90px;
+
+  color: #171717;
 }
 
 .section-inner {
@@ -324,6 +362,8 @@ function closeImage() {
 .section-header h2 {
   margin: 0;
 
+  color: #171717;
+
   font-size:
     clamp(
       2.5rem,
@@ -337,7 +377,7 @@ function closeImage() {
 }
 
 /* =========================
-   TWO-COLUMN ARTWORK ROWS
+   TWO-COLUMN ROWS
    ========================= */
 
 .two-work-grid {
@@ -356,18 +396,14 @@ function closeImage() {
       34px
     );
 
+  padding-top: 36px;
+
   margin-bottom: 34px;
 }
 
 /* =========================
-   PART I ARTWORK CARDS
+   ARTWORK CARDS
    ========================= */
-
-/*
-  PART I RULE:
-  Card moves on hover.
-  Image itself stays still.
-*/
 
 .work-card {
   position: relative;
@@ -401,23 +437,124 @@ function closeImage() {
 }
 
 .floor-card {
+  --card-bg:
+    rgba(206, 215, 185, 0.96);
+
   background:
-    rgba(206, 215, 185, 0.92);
+    var(--card-bg);
 }
 
 .meme-card {
+  --card-bg:
+    rgba(199, 214, 225, 0.96);
+
   background:
-    rgba(199, 214, 225, 0.92);
+    var(--card-bg);
 }
 
 .appropriation-card {
+  --card-bg:
+    rgba(225, 208, 183, 0.96);
+
   background:
-    rgba(225, 208, 183, 0.92);
+    var(--card-bg);
 }
 
 .painting-card {
+  --card-bg:
+    rgba(221, 195, 188, 0.96);
+
   background:
-    rgba(221, 195, 188, 0.92);
+    var(--card-bg);
+}
+
+/* =========================
+   FOLDER TAB
+   ========================= */
+
+.work-type-tab {
+  position: absolute;
+
+  top: -36px;
+  left: -2px;
+
+  z-index: 4;
+
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 0 16px;
+
+  color: #171717;
+
+  background: var(--card-bg);
+
+  border: 2px solid #171717;
+  border-bottom: 0;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* NEW: solid divider line at the bottom of the tab */
+.work-type-tab::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #171717;
+}
+
+.work-type-tab::after {
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+  right: -10px;
+
+  width: 8px;
+  height: calc(100% - 8px);
+
+  background: #171717;
+
+  pointer-events: none;
+}
+
+/*
+  Right-side tabs sit above the description
+  column and line up with the card's right edge.
+
+  Their shadow continues 8px below the tab so
+  it visually joins the card's right shadow.
+*/
+
+.description-right .work-type-tab {
+  right: -2px;
+  left: auto;
+}
+
+.description-right
+.work-type-tab::after {
+  height:
+    calc(
+      100%
+      + 0px
+    );
 }
 
 /* =========================
@@ -458,7 +595,7 @@ function closeImage() {
 }
 
 /* =========================
-   ARTWORK DIVIDER
+   DIVIDER
    ========================= */
 
 .media-divider {
@@ -475,7 +612,7 @@ function closeImage() {
 }
 
 /* =========================
-   TEXT
+   COPY
    ========================= */
 
 .work-copy h3,
@@ -484,6 +621,8 @@ function closeImage() {
     0
     0
     10px;
+
+  color: #171717;
 
   font-size:
     clamp(
@@ -501,21 +640,20 @@ function closeImage() {
 
   margin: 0;
 
+  color: #171717;
+
   font-size: 1rem;
 
   line-height: 1.7;
 }
 
 /* =========================
-   VIDEO / PERFORMANCE CARDS
+   VIDEO CARDS
    ========================= */
 
-/*
-  These intentionally use the same layout
-  structure as Part II performance cards.
-*/
-
 .performance-card {
+  position: relative;
+
   display: grid;
 
   grid-template-columns:
@@ -528,7 +666,10 @@ function closeImage() {
 
   padding: 0;
 
-  margin-bottom: 34px;
+  margin:
+    70px
+    0
+    34px;
 
   border:
     2px solid #171717;
@@ -586,19 +727,16 @@ function closeImage() {
    ARTWORK ANALYSIS
    ========================= */
 
-/*
-  Desktop:
-  text LEFT
-  video RIGHT
-*/
-
 .analysis-card {
+  --card-bg:
+    rgba(180, 207, 203, 0.96);
+
   grid-template-columns:
     minmax(280px, 0.7fr)
     minmax(0, 1.55fr);
 
   background:
-    rgba(180, 207, 203, 0.94);
+    var(--card-bg);
 }
 
 .analysis-card .performance-copy {
@@ -609,18 +747,15 @@ function closeImage() {
 }
 
 /* =========================
-   1 MINUTE VIDEO
+   PRESSURE
    ========================= */
 
-/*
-  Desktop:
-  video LEFT
-  text RIGHT
-*/
-
 .minute-card {
+  --card-bg:
+    rgba(202, 196, 218, 0.96);
+
   background:
-    rgba(202, 196, 218, 0.94);
+    var(--card-bg);
 }
 
 /* =========================
@@ -641,11 +776,6 @@ function closeImage() {
     grid-template-columns: 1fr;
   }
 
-  /*
-    Mobile/tablet ordering matches Part II:
-    video first, text second.
-  */
-
   .analysis-card .performance-media {
     order: 1;
   }
@@ -661,6 +791,19 @@ function closeImage() {
 
     border-top:
       2px solid #171717;
+  }
+
+  .description-right .work-type-tab {
+    right: auto;
+    left: -2px;
+  }
+
+  .description-right
+  .work-type-tab::after {
+    height:
+      calc(
+        100% - 8px
+      );
   }
 }
 
@@ -697,9 +840,11 @@ function closeImage() {
   .two-work-grid {
     grid-template-columns: 1fr;
 
-    gap: 20px;
+    gap: 56px;
 
-    margin-bottom: 20px;
+    padding-top: 36px;
+
+    margin-bottom: 56px;
   }
 
   .work-card {
@@ -709,15 +854,27 @@ function closeImage() {
       5px 5px 0 #171717;
   }
 
-  /*
-    No meaningful hover movement on touch.
-  */
-
   .work-card:hover {
     transform: none;
 
     box-shadow:
       5px 5px 0 #171717;
+  }
+
+  .work-type-tab {
+    top: -34px;
+
+    height: 34px;
+
+    padding:
+      0
+      12px;
+
+    font-size:
+      0.7rem;
+
+    letter-spacing:
+      0.06em;
   }
 
   .artwork-image {
@@ -727,7 +884,10 @@ function closeImage() {
   }
 
   .performance-card {
-    margin-bottom: 20px;
+    margin:
+      56px
+      0
+      56px;
 
     box-shadow:
       5px 5px 0 #171717;

@@ -33,9 +33,13 @@ function closeImage() {
            ========================= -->
 
       <article class="exploration-card drawing-card">
+        <div class="work-type-tab">
+          Traditional Drawing
+        </div>
+
         <div class="entry-copy top-copy">
           <h3>
-            Traditional Drawing
+            Mahito, Todo, Yuji
           </h3>
 
           <p>
@@ -74,13 +78,13 @@ function closeImage() {
               @click="
                 openImage(
                   '/part-2/drawing.webp',
-                  'Traditional Drawing'
+                  'Mahito, Todo, Yuji'
                 )
               "
             >
               <img
                 src="/part-2/drawing.webp"
-                alt="My finished traditional drawing"
+                alt="Mahito, Todo, Yuji"
                 class="paired-media"
               />
             </button>
@@ -109,7 +113,7 @@ function closeImage() {
             </button>
 
             <p class="media-label">
-              Reference
+              My Reference
             </p>
           </div>
         </div>
@@ -120,9 +124,13 @@ function closeImage() {
            ========================= -->
 
       <article class="exploration-card origami-card">
+        <div class="work-type-tab">
+          Origami
+        </div>
+
         <div class="entry-copy top-copy">
           <h3>
-            Origami
+            Magic Ball
           </h3>
 
           <p>
@@ -136,8 +144,8 @@ function closeImage() {
             would take me about that long. But boy was I
             wrong. I folded this during our department's "Day
             with the Chair." I started even before the event
-            began, and I didn't even manage to fully finish
-            it within the 3-hour event. I finished it shortly
+            began, and I didn't even manage to fully finish it
+            within the 3-hour event. I finished it shortly
             after in the Space Lounge. It was an interesting
             challenge, but I don't think I'd want to do it
             again anytime soon.
@@ -154,13 +162,13 @@ function closeImage() {
               @click="
                 openImage(
                   '/part-2/origami.webp',
-                  'Origami'
+                  'Magic Ball'
                 )
               "
             >
               <img
                 src="/part-2/origami.webp"
-                alt="Finished origami"
+                alt="Magic Ball origami"
                 class="origami-media"
               />
             </button>
@@ -190,7 +198,18 @@ function closeImage() {
            RAPPING
            ========================= -->
 
-      <article class="exploration-card performance-card rapping-card">
+      <article
+        class="
+          exploration-card
+          performance-card
+          rapping-card
+          description-right
+        "
+      >
+        <div class="work-type-tab">
+          Rapping
+        </div>
+
         <div class="performance-media">
           <video
             controls
@@ -206,7 +225,7 @@ function closeImage() {
 
         <div class="performance-copy">
           <h3>
-            Rapping
+            Bagsakan
           </h3>
 
           <p>
@@ -233,10 +252,20 @@ function closeImage() {
            PLAYING THE KEYBOARD
            ========================= -->
 
-      <article class="exploration-card performance-card keyboard-card">
+      <article
+        class="
+          exploration-card
+          performance-card
+          keyboard-card
+        "
+      >
+        <div class="work-type-tab">
+          Playing the Keyboard
+        </div>
+
         <div class="performance-copy">
           <h3>
-            Playing the Keyboard
+            Gate of Steiner
           </h3>
 
           <p>
@@ -282,7 +311,18 @@ function closeImage() {
            ROLEPLAYING
            ========================= -->
 
-      <article class="exploration-card performance-card roleplaying-card">
+      <article
+        class="
+          exploration-card
+          performance-card
+          roleplaying-card
+          description-right
+        "
+      >
+        <div class="work-type-tab">
+          Roleplaying
+        </div>
+
         <div class="performance-media">
           <video
             controls
@@ -298,7 +338,7 @@ function closeImage() {
 
         <div class="performance-copy">
           <h3>
-            Roleplaying
+            Ang Pagpupulong sa Tribunal
           </h3>
 
           <p>
@@ -313,7 +353,7 @@ function closeImage() {
             editing, it took me more than 15 hours to finish
             this. One thing that bothers me here is how it
             sometimes looks like I'm reading a script when I
-            act like I'm looking at the meet participants. 
+            act like I'm looking at the meet participants.
           </p>
         </div>
       </article>
@@ -337,6 +377,8 @@ function closeImage() {
     110px
     var(--page-padding)
     90px;
+
+  color: #171717;
 }
 
 .section-inner {
@@ -374,6 +416,8 @@ function closeImage() {
 .section-header h2 {
   margin: 0;
 
+  color: #171717;
+
   font-size:
     clamp(
       2.5rem,
@@ -387,11 +431,16 @@ function closeImage() {
 }
 
 /* =========================
-   STATIC PART II CARDS
+   STATIC CARDS
    ========================= */
 
 .exploration-card {
-  margin-bottom: 34px;
+  position: relative;
+
+  margin:
+    70px
+    0
+    34px;
 
   border:
     2px solid #171717;
@@ -399,14 +448,17 @@ function closeImage() {
   box-shadow:
     8px 8px 0 #171717;
 }
-
-/*
-  No hover/transform here.
-  Part II containers always stay still.
-*/
-
 .drawing-card {
+  --card-bg:
+    rgba(200, 205, 219, 0.96);
+
   padding:
+    16px
+    clamp(
+      20px,
+      2.4vw,
+      32px
+    )
     clamp(
       20px,
       2.4vw,
@@ -414,11 +466,20 @@ function closeImage() {
     );
 
   background:
-    rgba(200, 205, 219, 0.94);
+    var(--card-bg);
 }
 
 .origami-card {
+  --card-bg:
+    rgba(235, 192, 139, 0.96);
+
   padding:
+    16px
+    clamp(
+      20px,
+      2.4vw,
+      32px
+    )
     clamp(
       20px,
       2.4vw,
@@ -426,26 +487,111 @@ function closeImage() {
     );
 
   background:
-    rgba(235, 192, 139, 0.94);
+    var(--card-bg);
 }
 
 .rapping-card {
+  --card-bg:
+    rgba(193, 174, 201, 0.96);
+
   background:
-    rgba(193, 174, 201, 0.94);
+    var(--card-bg);
 }
 
 .keyboard-card {
+  --card-bg:
+    rgba(180, 207, 203, 0.96);
+
   background:
-    rgba(180, 207, 203, 0.94);
+    var(--card-bg);
 }
 
 .roleplaying-card {
+  --card-bg:
+    rgba(219, 185, 171, 0.96);
+
   background:
-    rgba(219, 185, 171, 0.94);
+    var(--card-bg);
 }
 
 /* =========================
-   TITLE + CAPTION
+   FOLDER TAB
+   ========================= */
+
+.work-type-tab {
+  position: absolute;
+
+  top: -36px;
+  left: -2px;
+
+  z-index: 4;
+
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 0 16px;
+
+  color: #171717;
+
+  background: var(--card-bg);
+
+  border: 2px solid #171717;
+  border-bottom: 0;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* NEW: solid divider line at the bottom of the tab */
+.work-type-tab::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #171717;
+}
+
+.work-type-tab::after {
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+  right: -10px;
+
+  width: 8px;
+  height: calc(100% - 8px);
+
+  background: #171717;
+
+  pointer-events: none;
+}
+.description-right .work-type-tab {
+  right: -2px;
+  left: auto;
+}
+
+.description-right
+.work-type-tab::after {
+  height: 100%;
+}
+
+/* =========================
+   TITLES + COPY
    ========================= */
 
 .top-copy {
@@ -459,6 +605,8 @@ function closeImage() {
     0
     0
     10px;
+
+  color: #171717;
 
   font-size:
     clamp(
@@ -476,9 +624,28 @@ function closeImage() {
 
   margin: 0;
 
+  color: #171717;
+
   font-size: 1rem;
 
   line-height: 1.7;
+}
+
+.entry-copy a,
+.performance-copy a {
+  color: #0645ad;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.entry-copy a:visited,
+.performance-copy a:visited {
+  color: #551a8b;
+}
+
+.entry-copy a:hover,
+.performance-copy a:hover {
+  text-decoration-thickness: 2px;
 }
 
 /* =========================
@@ -526,7 +693,7 @@ function closeImage() {
 }
 
 /* =========================
-   CLICKABLE PART II IMAGES
+   CLICKABLE IMAGES
    ========================= */
 
 .image-button {
@@ -561,12 +728,6 @@ function closeImage() {
     filter 180ms ease;
 }
 
-/*
-  Part II behavior:
-  container stays still,
-  individual image moves.
-*/
-
 .image-button:hover .paired-media {
   transform:
     scale(1.025);
@@ -580,6 +741,8 @@ function closeImage() {
     12px
     0
     0;
+
+  color: #171717;
 
   text-align: center;
 
@@ -656,6 +819,8 @@ function closeImage() {
   display: flex;
   align-items: center;
 
+  min-width: 0;
+
   padding:
     clamp(
       18px,
@@ -682,6 +847,8 @@ function closeImage() {
   flex-direction: column;
   justify-content: center;
 
+  min-width: 0;
+
   padding:
     clamp(
       24px,
@@ -693,7 +860,9 @@ function closeImage() {
     2px solid #171717;
 }
 
-/* Keyboard reverses text/video */
+/* =========================
+   KEYBOARD REVERSED
+   ========================= */
 
 .keyboard-card {
   grid-template-columns:
@@ -738,6 +907,19 @@ function closeImage() {
   .keyboard-card .performance-copy {
     order: 2;
   }
+
+  .description-right .work-type-tab {
+    right: auto;
+    left: -2px;
+  }
+
+  .description-right
+  .work-type-tab::after {
+    height:
+      calc(
+        100% - 8px
+      );
+  }
 }
 
 /* =========================
@@ -771,15 +953,37 @@ function closeImage() {
   }
 
   .exploration-card {
-    margin-bottom: 20px;
+    margin:
+      56px
+      0
+      20px;
 
     box-shadow:
       5px 5px 0 #171717;
   }
 
-  .drawing-card,
-  .origami-card {
-    padding: 16px;
+.drawing-card,
+.origami-card {
+  padding:
+    10px
+    16px
+    16px;
+}
+
+  .work-type-tab {
+    top: -34px;
+
+    height: 34px;
+
+    padding:
+      0
+      12px;
+
+    font-size:
+      0.7rem;
+
+    letter-spacing:
+      0.06em;
   }
 
   .pair-grid {
@@ -803,11 +1007,6 @@ function closeImage() {
   .performance-copy {
     padding: 20px;
   }
-
-  /*
-    Hover effects aren't useful on touch,
-    so don't leave transformed states around.
-  */
 
   .image-button:hover .paired-media,
   .image-button:hover .origami-media,

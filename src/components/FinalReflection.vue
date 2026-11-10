@@ -250,7 +250,7 @@
 */
 
 .monkey-tab {
-  top: 48px;
+  top: 28px;
   right: 48px;
 
   transform:

@@ -4,142 +4,185 @@
     class="appendices"
   >
     <div class="section-inner">
-      <!-- HEADER -->
       <header class="section-header">
-        <h2>Appendices</h2>
+        <h2>
+          Appendices
+        </h2>
       </header>
 
       <!-- =========================
            TRADITIONAL DRAWING
            ========================= -->
-      <article class="appendix-card drawing-card paired-card">
-        <div class="card-heading">
-          <h3>Traditional Drawing</h3>
+
+      <article class="appendix-card drawing-card">
+        <div class="work-type-tab">
+          Progress Photos & Final Work
         </div>
 
-        <div class="divider"></div>
+        <div class="appendix-heading">
+          <h3>
+            Traditional Drawing
+          </h3>
+        </div>
+
+        <div class="full-divider"></div>
 
         <div class="paired-media-grid">
-          <figure class="proof-item">
+          <div class="paired-media-cell">
             <div class="media-frame">
               <img
                 src="/appendices/drawing-process.gif"
-                alt="Traditional drawing progress"
-                class="proof-image"
+                alt="Traditional drawing progress photos"
+                class="appendix-image"
               />
             </div>
+          </div>
 
-            <figcaption>PROGRESS PHOTOS</figcaption>
-          </figure>
-
-          <figure class="proof-item">
+          <div class="paired-media-cell">
             <div class="media-frame">
               <img
                 src="/appendices/drawing-proof.webp"
-                alt="Completed traditional drawing"
-                class="proof-image"
+                alt="Traditional drawing final work"
+                class="appendix-image"
               />
             </div>
-
-            <figcaption>FINAL WORK</figcaption>
-          </figure>
+          </div>
         </div>
       </article>
 
       <!-- =========================
            ORIGAMI
            ========================= -->
-      <article class="appendix-card origami-card video-card">
-        <div class="video-heading">
-          <h3>Origami | Timelapse</h3>
+
+      <article class="appendix-card origami-card">
+        <div class="work-type-tab">
+          Timelapse
         </div>
 
-        <div class="divider"></div>
+        <div class="appendix-heading">
+          <h3>
+            Origami
+          </h3>
+        </div>
 
-        <div class="video-body">
+        <div class="full-divider"></div>
+
+        <div class="single-media">
           <video
-            src="/appendices/origami-timelapse.mp4"
+            class="appendix-video"
             controls
-            playsinline
             preload="metadata"
-          ></video>
+            playsinline
+          >
+            <source
+              src="/appendices/origami-timelapse.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </article>
 
       <!-- =========================
            RAPPING
            ========================= -->
-      <article class="appendix-card rapping-card video-card">
-        <div class="video-heading">
-          <h3>Rapping | Behind the Scenes</h3>
+
+      <article class="appendix-card rapping-card">
+        <div class="work-type-tab">
+          Behind the Scenes
         </div>
 
-        <div class="divider"></div>
+        <div class="appendix-heading">
+          <h3>
+            Rapping
+          </h3>
+        </div>
 
-        <div class="video-body">
+        <div class="full-divider"></div>
+
+        <div class="single-media">
           <video
-            src="/appendices/rapping-proof.mp4"
+            class="appendix-video"
             controls
-            playsinline
             preload="metadata"
-          ></video>
+            playsinline
+          >
+            <source
+              src="/appendices/rapping-proof.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </article>
 
       <!-- =========================
            PLAYING THE KEYBOARD
            ========================= -->
-      <article class="appendix-card keyboard-card video-card">
-        <div class="video-heading">
-          <h3>Playing the Keyboard | Behind the Scenes</h3>
+
+      <article class="appendix-card keyboard-card">
+        <div class="work-type-tab">
+          Behind the Scenes
         </div>
 
-        <div class="divider"></div>
+        <div class="appendix-heading">
+          <h3>
+            Playing the Keyboard
+          </h3>
+        </div>
 
-        <div class="video-body">
+        <div class="full-divider"></div>
+
+        <div class="single-media">
           <video
-            src="/appendices/keyboard-proof.mp4"
+            class="appendix-video"
             controls
-            playsinline
             preload="metadata"
-          ></video>
+            playsinline
+          >
+            <source
+              src="/appendices/keyboard-proof.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </article>
 
       <!-- =========================
            ROLEPLAYING
            ========================= -->
-      <article class="appendix-card roleplaying-card paired-card">
-        <div class="card-heading">
-          <h3>Roleplaying</h3>
+
+      <article class="appendix-card roleplaying-card">
+        <div class="work-type-tab">
+          Props, Outfits, & Process
         </div>
 
-        <div class="divider"></div>
+        <div class="appendix-heading">
+          <h3>
+            Roleplaying
+          </h3>
+        </div>
+
+        <div class="full-divider"></div>
 
         <div class="paired-media-grid">
-          <figure class="proof-item">
-            <div class="media-frame">
+          <div class="paired-media-cell">
+            <div class="media-frame roleplaying-frame">
               <img
                 src="/appendices/roleplaying-proof-1.webp"
                 alt="Roleplaying props and outfits"
-                class="proof-image"
+                class="appendix-image roleplaying-image"
               />
             </div>
+          </div>
 
-            <figcaption>PROPS & OUTFITS</figcaption>
-          </figure>
-
-          <figure class="proof-item">
-            <div class="media-frame">
+          <div class="paired-media-cell">
+            <div class="media-frame roleplaying-frame">
               <img
                 src="/appendices/roleplaying-proof-2.webp"
                 alt="Roleplaying process"
-                class="proof-image"
+                class="appendix-image roleplaying-image"
               />
             </div>
-
-            <figcaption>PROCESS</figcaption>
-          </figure>
+          </div>
         </div>
       </article>
     </div>
@@ -154,7 +197,9 @@
   padding:
     110px
     var(--page-padding)
-    100px;
+    90px;
+
+  color: #171717;
 }
 
 .section-inner {
@@ -203,65 +248,159 @@
 }
 
 /* =========================
-   GENERAL CARDS
+   GENERAL CARD
    ========================= */
 
 .appendix-card {
-  margin-bottom: 34px;
+  position: relative;
+
+  margin:
+    64px
+    0
+    34px;
+
+  padding:
+    18px
+    clamp(
+      20px,
+      2.4vw,
+      32px
+    )
+    clamp(
+      20px,
+      2.4vw,
+      32px
+    );
 
   border:
     2px solid #171717;
 
   box-shadow:
     8px 8px 0 #171717;
-
-  overflow: hidden;
 }
 
 .drawing-card {
+  --card-bg:
+    rgba(200, 205, 219, 0.96);
+
   background:
-    rgba(200, 205, 219, 0.94);
+    var(--card-bg);
 }
 
 .origami-card {
+  --card-bg:
+    rgba(235, 192, 139, 0.96);
+
   background:
-    rgba(235, 192, 139, 0.94);
+    var(--card-bg);
 }
 
 .rapping-card {
+  --card-bg:
+    rgba(193, 174, 201, 0.96);
+
   background:
-    rgba(193, 174, 201, 0.94);
+    var(--card-bg);
 }
 
 .keyboard-card {
+  --card-bg:
+    rgba(180, 207, 203, 0.96);
+
   background:
-    rgba(180, 207, 203, 0.94);
+    var(--card-bg);
 }
 
 .roleplaying-card {
+  --card-bg:
+    rgba(219, 185, 171, 0.96);
+
   background:
-    rgba(219, 185, 171, 0.94);
+    var(--card-bg);
 }
 
-.divider {
-  width: 100%;
+/* =========================
+   PROTRUDING TAB
+   ========================= */
+
+.work-type-tab {
+  position: absolute;
+
+  top: -36px;
+  left: -2px;
+
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 36px;
+
+  padding:
+    0
+    16px;
+
+  background:
+    var(--card-bg);
+
+  border:
+    2px solid #171717;
+
+  color: #171717;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+/* solid bottom divider on the tab */
+
+.work-type-tab::before {
+  content: "";
+
+  position: absolute;
+
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+
   height: 2px;
 
   background: #171717;
 }
 
-/* =========================
-   PAIRED IMAGE CARDS
-   ========================= */
+/* right-side shadow that stops before the top */
 
-.card-heading {
-  padding:
-    24px
-    28px;
+.work-type-tab::after {
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+  right: -10px;
+
+  width: 8px;
+
+  height:
+    calc(
+      100% - 8px
+    );
+
+  background: #171717;
 }
 
-.card-heading h3 {
+/* =========================
+   HEADING + DIVIDER
+   ========================= */
+
+.appendix-heading h3 {
   margin: 0;
+
+  color: #171717;
 
   font-size:
     clamp(
@@ -270,8 +409,41 @@
       3rem
     );
 
-  line-height: 1.1;
+  line-height: 1.05;
 }
+
+.full-divider {
+  width: 100%;
+  height: 2px;
+
+  margin:
+    14px
+    0
+    22px;
+
+  background: #171717;
+}
+
+/* =========================
+   MEDIA
+   ========================= */
+
+.single-media {
+  width: 100%;
+}
+
+.appendix-video {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  background: #000;
+}
+
+/* =========================
+   PAIRED MEDIA
+   ========================= */
 
 .paired-media-grid {
   display: grid;
@@ -281,17 +453,24 @@
       2,
       minmax(0, 1fr)
     );
+
+  gap: 0;
 }
 
-.proof-item {
-  margin: 0;
-
-  padding: 24px;
+.paired-media-cell {
+  padding:
+    0
+    18px
+    0
+    0;
 }
 
-.proof-item + .proof-item {
-  border-left:
-    2px solid #171717;
+.paired-media-cell + .paired-media-cell {
+  padding:
+    0
+    0
+    0
+    18px;
 }
 
 .media-frame {
@@ -302,12 +481,9 @@
   width: 100%;
 
   overflow: hidden;
-
-  /* No extra background behind image */
-  background: transparent;
 }
 
-.proof-image {
+.appendix-image {
   display: block;
 
   width: 100%;
@@ -320,66 +496,59 @@
     );
 
   object-fit: contain;
-}
-
-.proof-item figcaption {
-  margin-top: 14px;
-
-  font-size: 0.82rem;
-  font-weight: 700;
-
-  letter-spacing: 0.1em;
+  object-position: center;
 }
 
 /* =========================
-   VIDEO CARDS
+   ROLEPLAYING IMAGE RULES
    ========================= */
 
-.video-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 24px;
-
-  padding:
-    22px
-    28px;
+.roleplaying-frame {
+  min-height:
+    clamp(
+      340px,
+      36vw,
+      540px
+    );
 }
 
-.video-heading h3 {
-  margin: 0;
+.roleplaying-image {
+  width: auto;
 
-  font-size:
+  max-width: 100%;
+
+  height:
     clamp(
-      2rem,
-      3vw,
-      3rem
+      340px,
+      36vw,
+      540px
     );
 
-  line-height: 1.1;
+  object-fit: contain;
+  object-position: center;
 }
 
-.proof-label {
-  flex-shrink: 0;
+/* =========================
+   TABLET
+   ========================= */
 
-  font-size: 0.82rem;
-  font-weight: 700;
+@media (max-width: 900px) {
+  .paired-media-grid {
+    grid-template-columns: 1fr;
+  }
 
-  letter-spacing: 0.12em;
-}
+  .paired-media-cell {
+    padding: 0;
+  }
 
-.video-body {
-  padding: 24px;
-}
+  .paired-media-cell + .paired-media-cell {
+    padding:
+      24px
+      0
+      0;
 
-.video-body video {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  border: 0;
+    margin-top: 24px;
+  }
 }
 
 /* =========================
@@ -413,49 +582,60 @@
   }
 
   .appendix-card {
-    margin-bottom: 24px;
+    margin:
+      56px
+      0
+      24px;
+
+    padding:
+      14px
+      16px
+      16px;
 
     box-shadow:
       5px 5px 0 #171717;
   }
 
-  .card-heading,
-  .video-heading {
+  .work-type-tab {
+    top: -34px;
+
+    min-height: 34px;
+
     padding:
-      20px
+      0
+      12px;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.06em;
+  }
+
+  .appendix-heading h3 {
+    font-size:
+      clamp(
+        1.9rem,
+        8vw,
+        2.6rem
+      );
+  }
+
+  .full-divider {
+    margin:
+      12px
+      0
       18px;
   }
 
-  .video-heading {
-    align-items: flex-start;
-    flex-direction: column;
-
-    gap: 8px;
-  }
-
-  .paired-media-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .proof-item {
-    padding: 18px;
-  }
-
-  .proof-item + .proof-item {
-    border-left: 0;
-
-    border-top:
-      2px solid #171717;
-  }
-
-  .proof-image {
+  .appendix-image,
+  .roleplaying-image {
+    width: 100%;
     height: auto;
 
-    max-height: 500px;
+    max-height: none;
   }
 
-  .video-body {
-    padding: 18px;
+  .roleplaying-frame {
+    min-height: 0;
   }
 }
 </style>

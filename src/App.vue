@@ -79,11 +79,12 @@ import Appendices from './components/Appendices.vue'
                   </div>
 
                   <ul class="contents-items">
-                    <li>Floor Art</li>
+                    <li>Nature Art</li>
                     <li>Meme</li>
                     <li>AI Art Appropriation</li>
                     <li>Painting</li>
-                    <li>Pressure</li>
+                    <li>Artwork Analysis</li>
+                    <li>1 Minute Video</li>
                   </ul>
                 </div>
               </a>
