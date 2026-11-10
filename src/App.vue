@@ -190,6 +190,7 @@ import Appendices from './components/Appendices.vue'
 
       <Appendices />
     </main>
+    
   </div>
 </template>
 

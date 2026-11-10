@@ -16,6 +16,7 @@ const activeVideos = new Set()
 let fadeFrame = null
 let fadeId = 0
 let hasPlayedOnce = false
+let switchingVideos = false
 
 function cancelFade() {
   fadeId += 1
@@ -85,6 +86,10 @@ async function turnMusicOn() {
   musicEnabled.value = true
 
   try {
+    /*
+      First-ever play always starts
+      the song from the beginning.
+    */
     if (!hasPlayedOnce) {
       audio.value.currentTime = 0
     }
@@ -97,6 +102,11 @@ async function turnMusicOn() {
       hasPlayedOnce = true
     }
 
+    /*
+      If a portfolio video is already
+      playing, keep the background music
+      silent until that video stops.
+    */
     if (activeVideos.size === 0) {
       fadeTo(TARGET_VOLUME)
     }
@@ -130,6 +140,39 @@ function toggleMusic() {
   }
 }
 
+function pauseOtherAudibleVideos(currentVideo) {
+  switchingVideos = true
+
+  const videos =
+    document.querySelectorAll('video')
+
+  for (const video of videos) {
+    if (video === currentVideo) {
+      continue
+    }
+
+    /*
+      Leave intentionally muted looping
+      previews alone, such as Origami.
+    */
+    if (
+      video.muted ||
+      video.volume === 0
+    ) {
+      continue
+    }
+
+    if (
+      !video.paused &&
+      !video.ended
+    ) {
+      video.pause()
+    }
+  }
+
+  switchingVideos = false
+}
+
 function handleVideoPlay(event) {
   const video = event.target
 
@@ -137,6 +180,10 @@ function handleVideoPlay(event) {
     return
   }
 
+  /*
+    Ignore muted looping videos,
+    such as the Origami preview.
+  */
   if (
     video.muted ||
     video.volume === 0
@@ -144,6 +191,14 @@ function handleVideoPlay(event) {
     return
   }
 
+  /*
+    Only one audible portfolio video may
+    play at a time. Starting this video
+    pauses every other audible video.
+  */
+  pauseOtherAudibleVideos(video)
+
+  activeVideos.clear()
   activeVideos.add(video)
 
   if (
@@ -163,6 +218,15 @@ function handleVideoStop(event) {
   }
 
   activeVideos.delete(video)
+
+  /*
+    Do not briefly fade the music back in
+    while one video is being replaced by
+    another video.
+  */
+  if (switchingVideos) {
+    return
+  }
 
   if (
     activeVideos.size === 0 &&
@@ -445,7 +509,8 @@ onBeforeUnmount(() => {
 }
 
 /*
-  Vue transition when "Play me!" disappears.
+  Fade the Play me! hint away after
+  the visitor starts the music.
 */
 .play-hint-leave-active {
   transition:
